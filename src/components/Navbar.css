@@ -107,7 +107,6 @@
         color: black;
         font-family: 2rem;
         display: block;
-        
 
     }
     @media(min-width: 768px){
@@ -132,19 +131,11 @@
   left: 0;
   right: 0%;
   text-align: center;
-
-
-   
-
     a{
       font-size: 2rem;
       margin-top: 1rem;
         color: white;
-       
-
-       
-
-    }
+       }
   
 
 }

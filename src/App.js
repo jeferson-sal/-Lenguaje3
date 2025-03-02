@@ -1,29 +1,19 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/pages/Home';
 import Navbar from './components/Navbar';
-import './components/Navbar.css';
-import LandingPage from './components/LandingPage'; 
-import './components/LandingPage.css';
-import Hero from './components/Hero';
-import './components/Hero.css';
-import Footer from './components/Footer';
-import './components/Footer.css';
-import './components/Tarjeta';
-import Tarjeta from './components/Tarjeta';
-
-
-
-
-
 
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Hero/>
-      <Tarjeta/>
-      <Footer/>
-    </div>
+    <>
+   <Router>
+      <Navbar/>
+    <Routes>
+      <Route path='/' exact Component={Home}/>
+    </Routes> 
+ </Router>
+    </>
     
   );
 }

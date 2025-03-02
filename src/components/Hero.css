@@ -15,14 +15,13 @@
 } 
 
  .Texto {
-  
   display: flex;
   max-width: 1000px; /* 1000px de ancho */
   margin: auto; /* Centrar horizontalmente */
   height: 40%; /* 100% de la altura del contenedor */
   justify-content: left; /* Centrar horizontalmente */
-  flex-basis: auto;
- 
+  flex-basis: auto; 
+  
 }
 
 .box {
@@ -30,12 +29,13 @@
  text-align: left; /* Alinear a la izquierda */
  align-self: center; /* Centrar verticalmente */
  color:#052376;
+ font-family: "League Spartan", serif;/* Fuente League Spartan */
+ font-weight: 600;
   }
 
-samp{
+  samp{
   font-size: 1.875rem;
   font-weight: 600;
-  font-family: "League Spartan", serif;/* Fuente League Spartan */
   letter-spacing: 2px;
   color: orangered;
   }
@@ -50,29 +50,49 @@ samp{
     font-family: "League Spartan", serif;
   }
 
-  .btn{
+  .bn{
    flex-basis: 50%; /* 50% del ancho del contenedor */
    display:flex; 
-   border: solid 2px;
-   border-radius: 20px;
+   border: solid 0.125rem;
+   border-radius: 1.25rem;
    background-color: #4d148c;
    font-family: "League Spartan", serif;
-   font-weight: 500;
-   padding: 10px 30px 10px 30px ; 
-   margin-right: 380px;/* Margen derecho, lo ancho */
+   font-weight: 700;
+   padding: 0.625rem 1.875rem ; 
+   margin-top: -9rem; /* Mover hacia arriba */
    text-decoration: none; /* Sin subrayado */
    text-align: center;
    color: #fff;
    cursor:pointer;/* Cambiar el cursor " mano" */
+   position:absolute;
+   align-self: flex-start; /* Mover hacia la izquierda */
+  left: 30rem;
+   
   }
 
   /* Efectos al boton*/
-  .btn:hover {
+  .bn:hover {
     background-color: orangered; /* Cambiar el color de fondo cuando se coloca el cursor encima*/
   }
-  
 
-  .btn:active {
+  .bn:active {
     background-color: #4d148c;/* Cambiar el color de fondo cuando se hace clic vuelve a morado*/
   }
-  
+
+  @media (max-width: 768px){
+    .bn{
+     flex-basis: 50%;
+     margin-top: -6rem;
+     left: 0;
+ 
+     }
+   }
+
+
+  @media (max-width: 480px){
+   .bn{
+      padding: 0.5em 1rem;
+      font-size: 0.9rem;
+
+    }
+  }
