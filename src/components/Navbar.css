@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 2;
+    z-index: 10;
     
 }
 
@@ -160,15 +160,13 @@
 
 .initial{
   position: absolute;
-  background-color: #242222;
+  background-color: #4d148c;
   top: -1000;
   left: -1000;
   width: 10%;
   height: 7%;
   z-index: -1;
-  transition: all .6s ease;
-
-  
+  transition: all .6s ease;/* Efecto de transición */
 }
 
 .initial.active{      /* Aparece el menu en responsive */
