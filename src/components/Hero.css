@@ -59,14 +59,14 @@
    font-family: "League Spartan", serif;
    font-weight: 700;
    padding: 0.625rem 1.875rem ; 
-   margin-top: -11rem; /* Mover hacia arriba */
+   margin-top: -9rem; /* Mover hacia arriba */
    text-decoration: none; /* Sin subrayado */
    text-align: center;
    color: #fff;
    cursor:pointer;/* Cambiar el cursor " mano" */
    position:absolute;
    align-self: flex-start; /* Mover hacia la izquierda */
-   left: 9.375rem;
+  left: 30rem;
    
   }
 

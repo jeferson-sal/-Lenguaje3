@@ -5,7 +5,6 @@
 
 .card{ 
   position: relative;
-  z-index: -2;
     width: 15rem;
     margin-Right: 3rem;
     border-radius: 5%;
