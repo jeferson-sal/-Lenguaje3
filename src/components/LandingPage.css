@@ -3,12 +3,14 @@
     position: relative;
     font-family: sans-serif;
     text-align: center;
-    z-index: -2;
+
   }
   
   .encabezado {
     background-color: #1178bd;
     padding: 100px 20px;
+    
+    
   }
   
   .hero h1 {
@@ -29,6 +31,7 @@
     border-radius: 5px;
     font-size: 1.1em;
     cursor: pointer;
+   
   }
   
   .tarjetas {
