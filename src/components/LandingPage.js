@@ -1,15 +1,26 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './LandingPage.css';
 
 function LandingPage() {
+  // Estado para manejar la visibilidad del menú
+  const [isMenuActive, setIsMenuActive] = useState(false);
+
+  // Función para activar o desactivar el menú
+  const toggleMenu = () => {
+    setIsMenuActive(!isMenuActive);
+  };
   return (
     <div className="landing-page">
       <header className="encabezado">
         <h1>Bienvenido a Nuestra LandingPage</h1>
         <p>Un lugar donde encontrarás soluciones increíbles.</p>
-        <button className="cta-button">¡Comienza ahora!</button>
+        <button className="cta-button" onClick={toggleMenu}>¡Comienza ahora!</button>
       </header>
-          
+      {/* El menú */}
+      <div className={`menu ${isMenuActive ? 'active' : ''}`}>
+        <button className="back-button" onClick={toggleMenu}>Atrás</button>
+        {/* Aquí puedes poner más contenido dentro del menú */}
+      </div>    
       <section className="tarjetas">  
         <div className="tarjeta">
           <h3>Característica 1</h3>
