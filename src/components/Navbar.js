@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import './Navbar.css'
 import Hamburguesa from './Hamburguesa.js';
+import { Link } from 'react-router-dom';
 
 function Navbar () {
   const [clicked,setclicked] = useState(false)
@@ -9,16 +10,19 @@ function Navbar () {
      setclicked(!clicked);
   };
  
+  const closeMenu = () => {
+    setclicked(false); // Cierra el menú siempre al hacer click en un link
+};
   
     return(
        <> 
       <nav className='nav'> 
      <img className='logo'src='../logo.jpg' alt= 'logo'/>
       <div className={`links ${clicked ? 'active' : ''}`}>
-        <a className='alink' onClick={handleClick} href='/'>Inicio</a>
-        <a className='alink' onClick={handleClick} href='/'>Testimonio</a>
-        <a className='alink' onClick={handleClick} href='/'>Portafolio</a>
-        <a className='alink' onClick={handleClick} href='/'>Nosotros</a>
+        <Link className='alink' onClick={closeMenu} to='/'>Inicio</Link>
+        <Link className='alink' onClick={closeMenu} to='/Testimonio'>Testimonio</Link>
+        <Link className='alink' onClick={closeMenu} to='/Portafolio'>Portafolio</Link>
+        <Link className='alink' onClick={closeMenu} to='/Nosotros'>Nosotros</Link>
       </div>
 
       <div className='ocultar'>  

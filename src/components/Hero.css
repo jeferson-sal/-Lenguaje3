@@ -65,8 +65,14 @@
    color: #fff;
    cursor:pointer;/* Cambiar el cursor " mano" */
    position:absolute;
+<<<<<<< HEAD
    align-self:flex-start; /* Mover hacia la izquierda */
   left: 30rem;
+=======
+   align-self: flex-start; /* Mover hacia la izquierda */
+   left: 30rem;
+  
+>>>>>>> origin/master
    
   }
 
