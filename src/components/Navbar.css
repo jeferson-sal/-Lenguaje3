@@ -1,3 +1,8 @@
+/* Importacion de Fuente League Spartan de google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+
+
 .conav{
     font-weight: 400;
     color: white;
@@ -18,16 +23,30 @@
 }
 
 .alink{
-  
-    color: black;
+    font-family: "League Spartan", serif;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
     text-decoration: none;
-    margin-right: 1rem;
-   
-  
 
-}
+    margin-right: 2rem;/* se agrego estilo al navbar linea morada abajo*/
+    position: relative;/* se agrego estilo al navbar linea morada abajo*/
+  }
+  /* se agrego estilo al navbar linea morada abajo*/
+  .alink::after{
+    content: '';
+    position: absolute;
+    display: block;
+    height: 0.1em;
+    background-color: #4d148c;
+    width:0%;
+    /* se agrego estilo al navbar linea morada abajo*/
+  }
+  .alink:hover::after{
+    width: 85%;
+  }
 
-.hamburguesa{;
+
+.hamburguesa{
     position:relative;
     z-index:3;
     .nav-icon-5{

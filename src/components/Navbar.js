@@ -23,6 +23,8 @@ function Navbar () {
         <Link className='alink' onClick={closeMenu} to='/Testimonio'>Testimonio</Link>
         <Link className='alink' onClick={closeMenu} to='/Portafolio'>Portafolio</Link>
         <Link className='alink' onClick={closeMenu} to='/Nosotros'>Nosotros</Link>
+        <Link className='alink' onClick={closeMenu} to='/Proyectos'>Proyectos</Link>
+
       </div>
 
       <div className='ocultar'>  
