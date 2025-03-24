@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Testimonio from './components/Testimonio';
 import Portafolio from './components/Portafolio';
 import Nosotros from './components/Nosotros';
+import ProjectForm from './components/ProjectForm';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
    <Router>
       <Navbar/>
     <Routes>
-      <Route path='/' element ={<Home/>}/>
+    <Route path='/' element ={<ProjectForm/>}/>
+      <Route path='/Home' element ={<Home/>}/>
       <Route path='/Testimonio' element={<Testimonio/>}/>
       <Route path='/Portafolio' element={<Portafolio/>}/>
       <Route path='/Nosotros' element={<Nosotros/>}/>
