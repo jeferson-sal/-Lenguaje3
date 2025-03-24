@@ -1,12 +1,27 @@
-import React from 'react'
+import React, {useState} from 'react'
+import ProjectForm from './ProjectForm';
 
-const Portafolio = () => {
-  return (
-    <div>
-    <h1>Portafolio</h1>
-    <p>Estos son algunos de los proyectos que hemos realizado...</p>
-</div>
-  )
+function Portafolio(){
+  const [recitext,setRecitext] = useState('');
+
+const handleTextChange = (textarea) => {
+  setRecitext(textarea);
+};
+console.log('handleTextChange:', handleTextChange); // Verifica la función antes de pasarla
+
+return (
+  <div>
+    <ProjectForm onTextChange={handleTextChange}/>
+    <p> Descripción Del Proyecto:{recitext} </p>
+  </div>
+)
+
+
+
+
+
 }
 
-export default Portafolio
+
+export default Portafolio;
+

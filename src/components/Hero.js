@@ -5,7 +5,7 @@ import './Hero.css';
 function Hero() {
   return (
     <div>
-   <div className="contenedor"> 
+   <div className="contenedor">
      <div className="Texto">
         <div className="box">
             <samp>Bienvedido</samp> 
