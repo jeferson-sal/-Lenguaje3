@@ -1,3 +1,8 @@
+/* Importacion de Fuente League Spartan de google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+
+
 .conav{
     font-weight: 400;
     color: white;
@@ -14,21 +19,36 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 10;
     
 }
 
 .alink{
-  
-    color: black;
+    font-family: "League Spartan", serif;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
     text-decoration: none;
-    margin-right: 1rem;
-   
-  
 
-}
+    margin-right: 2rem;/* se agrego estilo al navbar linea morada abajo*/
+    position: relative;/* se agrego estilo al navbar linea morada abajo*/
+  }
+  /* se agrego estilo al navbar linea morada abajo*/
+  .alink::after{
+    content: '';
+    position: absolute;
+    display: block;
+    height: 0.1em;
+    background-color: #4d148c;
+    width:0%;
+    /* se agrego estilo al navbar linea morada abajo*/
+  }
+  .alink:hover::after{
+    width: 85%;
+  }
+
 
 .hamburguesa{
+    position:relative;
+    z-index:3;
     .nav-icon-5{
         width: 35px;
         height: 30px;
@@ -47,8 +67,7 @@
         width:100%;
         height: 4px;
         transition-duration: 500ms
-      
-
+        
       }
       .nav-icon-5 span:nth-child(1){
         top:0px;
@@ -83,13 +102,14 @@
         transform: rotate(-50deg);
         top: 13px;
       }
+      
 }
 
 .logo {
   height: 60px; /* Ajusta la altura de la imagen */
   margin-right: 20px; /* Agrega un margen a la derecha de la imagen */
   border-radius: 10%; /* Ajusta el radio de la imagen, el borde */
-  
+  z-index:3;
 }
 
 .links{
@@ -131,6 +151,7 @@
   left: 0;
   right: 0%;
   text-align: center;
+  z-index:3;
     a{
       font-size: 2rem;
       margin-top: 1rem;
@@ -166,6 +187,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  z-index:2;
 
 
   

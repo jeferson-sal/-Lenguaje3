@@ -10,18 +10,21 @@
     border-radius: 5%;
     box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
     transition: all 400ms ease; /*efecto suave */
-}
+    z-index:1;
+  }
 
 .card:hover{
     box-shadow: 5px 5px 20px rgba(0,0,0,0.4);/* Efecto de sombra*/
     transform: translateY(-3%); /* Efecto hacia arriba de manera vertical*/
-}
+    z-index:1;
+  }
 
 .card-text{
     font-family: "League Spartan", serif;/* Fuente League Spartan */
     font-weight: 600%;
     text-align: center;
-}
+    z-index:1;
+  }
 
 .bot{
         flex-basis: 50%; /* 50% del ancho del contenedor */
