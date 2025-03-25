@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/pages/Home';
+import LandingPage1 from './components/LandingPage1';
 import Navbar from './components/Navbar';
 
 
@@ -10,7 +10,7 @@ function App() {
    <Router>
       <Navbar/>
     <Routes>
-      <Route path='/' exact Component={Home}/>
+      <Route path='/' exact Component={LandingPage1}/>
     </Routes> 
  </Router>
     </>
@@ -19,3 +19,4 @@ function App() {
 }
 
 export default App;
+
