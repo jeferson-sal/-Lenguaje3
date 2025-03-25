@@ -3,6 +3,7 @@ import './Navbar.css'
 import Hamburguesa from './Hamburguesa.js';
 import { Link } from 'react-router-dom';
 
+
 function Navbar () {
   const [clicked,setclicked] = useState(false)
   const handleClick = () => {
@@ -20,6 +21,7 @@ function Navbar () {
      <img className='logo'src='../logo.jpg' alt= 'logo'/>
       <div className={`links ${clicked ? 'active' : ''}`}>
         <Link className='alink' onClick={closeMenu} to='/'>Inicio</Link>
+        <Link className='alink' onAbort={closeMenu} to= '/login'>Login</Link>
         <Link className='alink' onClick={closeMenu} to='/Testimonio'>Testimonio</Link>
         <Link className='alink' onClick={closeMenu} to='/Portafolio'>Portafolio</Link>
         <Link className='alink' onClick={closeMenu} to='/Nosotros'>Nosotros</Link>
