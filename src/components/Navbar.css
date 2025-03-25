@@ -1,41 +1,35 @@
-/* Aplica el efecto de blanco y negro a toda la página */
-body.black-and-white {
-  filter: grayscale(100%);
-}
-
+/* Estilos normales del navbar */
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #f8f9fa;
+  background: #fff;
+  width: 100%;
 }
 
-.nav-right {
+/* Contenedor de la luna y login */
+.right-section {
   display: flex;
   align-items: center;
-  gap: 10px; /* Espacio entre icono y botón */
+  gap: 10px;
+  margin-left: auto;
 }
 
+/* Botón de la luna */
+.dark-mode-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilo del icono */
 .dark-mode-icon {
   font-size: 24px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-.dark-mode-icon:hover {
-  color: #555;
-}
-
-.login-button {
-  text-decoration: none;
-  background-color: #007bff;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-.login-button:hover {
-  background-color: #0056b3;
+/* Modo Blanco y Negro */
+.monochrome-mode {
+  filter: grayscale(100%);
 }
