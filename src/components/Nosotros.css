@@ -1,0 +1,109 @@
+* Contenedor principal de la navegación */
+.nav {
+  padding: .4rem;
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  height: 60px;
+  margin-right: 20px;
+  border-radius: 10%;
+  z-index: 3;
+}
+
+/* Estilo para los enlaces en el Navbar */
+.alink {
+  color: black;
+  text-decoration: none;
+  margin-right: 1rem;
+  padding: 8px 16px; /* Agregado para hacer que los enlaces se vean más claros */
+}
+
+/* Estilos para la hamburguesa */
+.hamburguesa {
+  position: relative;
+  z-index: 3;
+}
+
+/* Estilos del menú en dispositivos pequeños */
+.links {
+  display: flex;
+  justify-content: flex-end; /* Alinea los enlaces a la derecha */
+  position: absolute;
+  top: 50px; /* Asegura que los enlaces estén un poco más abajo que el botón de modo oscuro */
+  right: 20px;
+  text-align: center;
+  transition: all .5s ease;
+}
+
+.links a {
+  font-size: 1rem;
+  color: black;
+  margin-left: 15px;
+  text-align: right;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+/* Ajustes para la hamburguesa */
+.ocultar {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+/* Estilo para el botón de modo oscuro */
+.dark-mode-btn {
+  padding: 6px 12px;
+  background-color: #5a7df2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px; /* Separación entre el botón y los enlaces */
+  position: absolute;
+  top: 10px; /* Posición fija más cerca de la parte superior */
+  right: 20px;
+}
+
+.dark-mode-btn:hover {
+  background-color: #4a6cd1;
+}
+
+/* Estilos cuando el modo oscuro está activado */
+body.dark .nav {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark .alink {
+  color: #fff;
+}
+
+body.dark .dark-mode-btn {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark .dark-mode-btn:hover {
+  background-color: #444;
+}
+
+/* Otros estilos para toda la página cuando está en modo oscuro */
+body.dark {
+  background-color: #181818;
+  color: #f8f9fc;
+}
+
+/* Estilo de transición en los enlaces */
+.links a:hover {
+  background-color: #5a7df2;
+  color: white;
+}
+
+
