@@ -31,6 +31,7 @@ color:#007BFF
 .hamburguesa{;
   position:relative;
   z-index:3;
+  right: 30px;
   .nav-icon-5{
       width: 35px;
       height: 30px;
@@ -38,9 +39,7 @@ color:#007BFF
       position: relative;
       cursor: pointer;
       display: inline-block;
-      right: 40%;
-      
-
+     
     }
     .nav-icon-5 span{
       background-color: black;
@@ -179,7 +178,7 @@ z-index:2;
 .translate-btn {
   position: fixed;
   top: 10px;
-  right: 6px;
+  right: 10px;
   background-color: transparent;
   border: none;
   font-size: 24px;
@@ -200,10 +199,44 @@ z-index:2;
   background-color: rgba(0, 123, 255, 0.1); /* Color de fondo suave */
   color: #007BFF; /* Cambiar color del texto a azul */
   transform: scale(1.1); /* Agrandar ligeramente el botón */
+  
 }
 
 /* Efecto cuando el botón está en foco (cuando se hace clic o se selecciona) */
-.translate-btn:focus {
-  outline: none; /* Eliminar el borde por defecto */
-   /* Agregar un borde azul */
+
+
+/* Contenedor de la luna y login */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  z-index:9999;
 }
+
+/* Botón de la luna */
+.dark-mode-button {
+  background-color: black;  /* Fondo negro */
+  color: white;             /* Texto blanco */
+  border: none;             /* Eliminar borde */
+  margin: 0;                /* Eliminar margen */
+  cursor: pointer;
+  padding: 4px;            /* Agregar un poco de espacio dentro del botón */
+  border-radius: 10px;       /* Bordes redondeados opcionales */
+}
+.dark-mode-button:hover {
+  background-color: rgba(0, 123, 255, 0.1); /* Color de fondo suave */
+  color: #007BFF; /* Cambiar color del texto a azul */
+  transform: scale(1.1); /* Agrandar ligeramente el botón */
+}
+
+/* Estilo del icono */
+.dark-mode-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Modo Blanco y Negro */
+.monochrome-mode {
+  filter: grayscale(100%);
+} 
