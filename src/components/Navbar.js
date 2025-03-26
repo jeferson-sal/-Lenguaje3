@@ -44,6 +44,7 @@ function Navbar() {
           <Link className="alink" onClick={closeMenu} to="/">
             {translations[language].inicio}
           </Link>
+          <Link className='alink' onAbort={closeMenu} to= '/login'>Login</Link>
           <Link className="alink" onClick={closeMenu} to="/Testimonio">
             {translations[language].testimonio}
           </Link>

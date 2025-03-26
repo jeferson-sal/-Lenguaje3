@@ -1,11 +1,25 @@
 import './App.css'; 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import Home from './components/pages/Home';  // Asegúrate de que Home.js esté en components/pages/
 import Navbar from './components/Navbar';   // Asegúrate de que Navbar.js esté en components/
 import Testimonio from './components/Testimonio';   // Asegúrate de que Testimonio.js esté en components/
 import Portafolio from './components/Portafolio';   // Asegúrate de que Portafolio.js esté en components/
 import Nosotros from './components/Nosotros';   // Asegúrate de que Nosotros.js esté en components/
 import React from 'react';
+import Login from './components/Login';
+import { AuthProvider } from "./contexts/AuthContext"; 
+import Dashboard from "./components/Dashboard";
+import ForgotPassword from "./components/ForgotPassword";
+import UpdateProfile from "./components/UpdateProfile";
+import Signup from "./components/Signup";
+import { useAuth } from "./contexts/AuthContext";
+
+
+// Componente para rutas privadas
+function PrivateRoute() {
+  const { currentUser } = useAuth();
+  return currentUser ? <Outlet /> : <Navigate to="/login" replace />;
+}
 
 function App() {
 	const images = [
@@ -74,13 +88,25 @@ function App() {
 	  
     return (
       <Router>
+       <AuthProvider>
         <Navbar />
-        <Routes>
+         <Routes>
+       
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/Testimonio" element={<Testimonio images={images} />} />
           <Route path="/Portafolio" element={<Portafolio />} />
           <Route path="/Nosotros" element={<Nosotros />} />
-        </Routes>
+
+          {/* Agrupando rutas privadas */}
+          <Route element={<PrivateRoute />}>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/update-profile" element={<UpdateProfile />} />
+          </Route> 
+         </Routes>
+       </AuthProvider>
       </Router>
     );
 }
